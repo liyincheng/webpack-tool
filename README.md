@@ -4,6 +4,7 @@
 usage: 
     node replaceJSPVersion.js --sourceMap="./source-map.json" --outputDir="./output" --pathPrefix="//cnd.mycdn.com"
     --input="../jsp/"
+    
 
 参数说明:
 
