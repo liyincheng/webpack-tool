@@ -1,9 +1,12 @@
 # version-control-replace-html
 一个根据source-map，把html里面的js/css路径换成带版本号的脚本
 
+
 usage: 
+
     node replaceJSPVersion.js --sourceMap="./source-map.json" --outputDir="./output" --pathPrefix="//cnd.mycdn.com"
     --input="../jsp/"
+    
     
 
 参数说明:
