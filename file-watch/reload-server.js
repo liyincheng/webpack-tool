@@ -1,7 +1,7 @@
 var allConnections = [];
 
 function recieveFun(msg) {
-    //process.send('Hello ' + input);
+    //接收到刷新的消息时，向浏览器传递
     if(msg.msgType === "reload"){
         for(var i = 0; i < allConnections.length; i++){
             allConnections[i].write(JSON.stringify({type: "reload"}));
@@ -9,6 +9,7 @@ function recieveFun(msg) {
     }
 }
 
+//使用进程间的通信
 process.on('message', function(msg) {
     recieveFun(msg);
 });
