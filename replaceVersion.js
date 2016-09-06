@@ -28,13 +28,6 @@ try{
     return;
 }
 
-var libMap = {
-    "jssor.slider.mini.js": "/static/js/jssor.slider.mini.js",
-    "jquery-1.11.3.min.js": "/static/js/jquery-1.11.3.min.js",
-    "mustache.min.js": "/static/js/mustache.min.js",
-    "html5media.min.js":"/static/js/html5media.min.js"
-}
-
 
 //替换一个文件
 function doReplaceFile(inputFilePath, outputFilePath){
@@ -43,13 +36,6 @@ function doReplaceFile(inputFilePath, outputFilePath){
     content.split(/\r?\n/).forEach(function (line) {    
         line = line.trim();
         if(!line.length) return;
-        if(line.indexOf("static-lib") >= 0){
-            for(var key in libMap){
-                if(line.indexOf(key) >= 0){
-                    line = '<script src="' + libMap[key] + '"></script>';
-                }
-            }
-        }
         if(line.match(/fedren.com/)){
             var patterns = line.match(/\/([^\/]+)\.(js|css)/);
             var module = patterns[1];
