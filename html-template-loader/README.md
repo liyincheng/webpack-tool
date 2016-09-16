@@ -6,8 +6,8 @@ Html模板loader
 
 2. 把webpack的配置加一个loader：
  ```javascript
-{
-            test:/\.tpl\.html$/,
+            {
+                        test:/\.tpl\.html$/,
                         loader: 'html-template-loader'
             }
 ```
@@ -17,11 +17,11 @@ Html模板loader
 
 首先写一个依赖的script，带上generate属性
 
-```html
+[code language="html"]
 <script generate>
-            var SELECT = require("js/select");
+        var SELECT = require("js/select");
 </script>
-```
+[/code]
 
 下面就可以用这个用来生成select，或者是写一个function也可以：
 
@@ -38,7 +38,7 @@ Html模板loader
 在用的时候就写一个<script>标签，别带generate，
 
             ```html
-            <script>select.makSelect()</script>
+                        <script>select.makSelect()</script>
             ```
             
 不同的变量用<!--%变量名%-->隔开，像上面的截图
@@ -46,7 +46,6 @@ Html模板loader
             ```html
             <!--%email%-->
             <div></div>
-
             <!--%alert%-->
             <div></div>
             ```
@@ -65,7 +64,8 @@ single.tpl.html:
             <div>1</div>
             <p>2</p>
             ```
-            ```js
+            
+            ```javascript
             var tpl = require("tpl/single.tpl.html");
             console.log(tpl) //tpl是一个字符串
             ```
