@@ -5,13 +5,12 @@ Html模板loader
 1. 把下面这个目录拷到你工程的node_modules，等上传到npm应该就可以直接install了
 
 2. 把webpack的配置加一个loader：
-
-
+            ```js
             {
                 test:/\.tpl\.html$/,
                 loader: 'html-template-loader'
             }
-
+            ```
 
 3. 模板文件的后缀名为.tpl.html，模板的写法有两种格式，一种是一个文件文件一个模板，另一种是一个文件有几个模板，用变量区分：
 一个文件有几个模板的：
@@ -24,6 +23,7 @@ Html模板loader
             ```
 
 下面就可以用这个用来生成select，或者是写一个function也可以：
+
             ```html
             <script generate>
                         function makeSelect(){
@@ -40,8 +40,8 @@ Html模板loader
             <script>select.makSelect()</script>
             ```
             
-
 不同的变量用<!--%变量名%-->隔开，像上面的截图
+
             ```html
             <!--%email%-->
             <div></div>
@@ -49,6 +49,7 @@ Html模板loader
             <!--%alert%-->
             <div></div>
             ```
+
 3. 然后就可以require这个以.tpl.html结尾的模块：
             ```js
             var tpl = require("tpl/home.tpl.html");
@@ -58,6 +59,7 @@ Html模板loader
 4. 如果一个模块只有单个变量的，则直接写html即可，最好require返回的是一个string
 
 single.tpl.html:
+
             ```html
             <div>1</div>
             <p>2</p>
