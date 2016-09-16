@@ -42,32 +42,24 @@ Html模板loader
 
 不同的变量用<!--%变量名%-->隔开，像上面的截图
 
-            ```
             <!--%email%-->
             <div></div>
             <!--%alert%-->
             <div></div>
-            ```
 
 3. 然后就可以require这个以.tpl.html结尾的模块：
 
-
-            ```javascript
             var tpl = require("tpl/home.tpl.html");
             $("body").append(tpl.email);
-            ```
 
 4. 如果一个模块只有单个变量的，则直接写html即可，最好require返回的是一个string
 
 single.tpl.html:
 
-            ```
             <div>1</div>
             <p>2</p>
-            ```
+
             
-            ```javascript
             var tpl = require("tpl/single.tpl.html");
             console.log(tpl) //tpl是一个字符串
-            ```
 
