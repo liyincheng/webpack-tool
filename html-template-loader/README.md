@@ -25,13 +25,12 @@ Html模板loader
 
 下面就可以用这个用来生成select，或者是写一个function也可以：
 
-            ```
             <script generate>
                         function makeSelect(){
                                     return "...";
                         }    
             </script>
-            ```
+
 下面就可以调这个function
 如果是纯html，不需要使用js处理的，则不用写这个<script generate>
 
