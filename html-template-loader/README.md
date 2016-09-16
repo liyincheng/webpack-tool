@@ -17,15 +17,15 @@ Html模板loader
 
 首先写一个依赖的script，带上generate属性
 
-[code language="html"]
+```
 <script generate>
         var SELECT = require("js/select");
 </script>
-[/code]
+```
 
 下面就可以用这个用来生成select，或者是写一个function也可以：
 
-            ```html
+            ```
             <script generate>
                         function makeSelect(){
                                     return "...";
@@ -37,13 +37,12 @@ Html模板loader
 
 在用的时候就写一个<script>标签，别带generate，
 
-            ```html
-                        <script>select.makSelect()</script>
-            ```
-            
+<script>select.makSelect()</script>
+
+
 不同的变量用<!--%变量名%-->隔开，像上面的截图
 
-            ```html
+            ```
             <!--%email%-->
             <div></div>
             <!--%alert%-->
@@ -51,7 +50,9 @@ Html模板loader
             ```
 
 3. 然后就可以require这个以.tpl.html结尾的模块：
-            ```js
+
+
+            ```javascript
             var tpl = require("tpl/home.tpl.html");
             $("body").append(tpl.email);
             ```
@@ -60,7 +61,7 @@ Html模板loader
 
 single.tpl.html:
 
-            ```html
+            ```
             <div>1</div>
             <p>2</p>
             ```
