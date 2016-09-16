@@ -1,4 +1,4 @@
-Html模板loader
+##Html模板loader
 
 搞了个html模板loader，为了解决在js里面写html模板不方便的问题
 
@@ -62,3 +62,4 @@ single.tpl.html:
             var tpl = require("tpl/single.tpl.html");
             console.log(tpl) //tpl是一个字符串
 
+详见博客：[怎样写一个webpack loader](http://yincheng.site/webpack-loader)
