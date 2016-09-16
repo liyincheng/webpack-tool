@@ -5,10 +5,11 @@ Html模板loader
 1. 把下面这个目录拷到你工程的node_modules，等上传到npm应该就可以直接install了
 
 2. 把webpack的配置加一个loader：
-            {
+            `{
                 test:/\.tpl\.html$/,
                 loader: 'html-template-loader'
-            }
+            }`
+
 
 3. 模板文件的后缀名为.tpl.html，模板的写法有两种格式，一种是一个文件文件一个模板，另一种是一个文件有几个模板，用变量区分：
 一个文件有几个模板的：
